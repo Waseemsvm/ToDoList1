@@ -1,0 +1,251 @@
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+div.wrapper{
+    width: 100%;
+    
+    position: relative;
+}
+
+.centerDiv{
+    margin: 0 auto;
+}
+
+/*  Style for the head division of Wrapper*/
+
+div.wrapper>div.head{
+    width: 1197px;
+    height: 80px;
+    background-color: #FFF2AE;
+    padding: 10px;
+    position: absolute;
+    left: 70px;
+    top: 47px;
+    border-radius: 10px;
+}
+/* style for the text within the head section of the wrapper c */
+div.head>p{
+    color: #00FF19;
+    font-family: Rokkitt;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 45px;
+    line-height: 60px;
+    text-align: center;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+
+
+/* Style of body division of wrapper */
+
+div.wrapper>div.body{
+    width: 1197px;
+    height: 450px;
+    background-color: #FFE1B4;
+    position: absolute;
+    left: 60px;
+    top: 173px;
+    border-radius: 10px 0px 0px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 30px;
+    gap: 10%;
+}
+
+
+
+/* style the input field in the input  block */
+
+div.inputBlock{
+    position: sticky;
+    
+}
+
+/* style for input todo field within input block */
+div.inputTodo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+/* style for input field in inputTodo div */
+
+div.inputTodo>input.inputField{
+    background-color: #FEFFCA;
+    width: 754px;
+    height: 64px;
+    outline: none;
+    border: none;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px 0px 0px 10px;
+    font-family: Rokkitt;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 35px;
+    line-height: 55px;
+    text-align: left;
+    color: #000000;
+    padding-left: 10px;
+}
+
+/* style the add to do button in input todo block */
+
+div.inputTodo>button.addButton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 94px;
+    height: 64px;
+    background-color: #FFC700;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 0px 20px 20px 0px;
+    font-family: Rokkitt;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 64px;
+    line-height: 73px;
+    color: #F50000;
+    border: 1px solid #866a04;
+    text-shadow: 0px 4px 4px #000000;
+}
+
+
+/* style for todos that are added dynamically */
+
+div.todoBlock{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: scroll;
+    margin-bottom: 0;
+}
+
+
+/* style for individual todos  */
+div.todoBlock>div.todos{
+    
+    width: 858px;
+    height: 64px;
+    display: flex;
+    justify-content: space-between;
+    gap: 1%;
+    margin-top: 20px;
+   
+}
+
+/* style for text in todos */
+
+div.todoText{
+    width: 731px;
+    height: 64px;
+    background: #FEFFCA;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px 0px 0px 10px;
+    font-family: Rokkitt;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 35px;
+    line-height: 55px;
+    text-align: left;
+    color: #000000;
+    padding-left: 10px;
+}
+
+/* style for buttons in todos */
+
+button.deleteTodo, button.doneTodo{
+    width: 96px;
+    height: 64px;
+    background: #FFC700;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 0px;
+    
+}
+
+button.deleteTodo{
+    width: 96px;
+    height: 64px;
+    background: #FFC700;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 0px;
+    background-image: url('../images/delete.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+button.doneTodo{
+    background-image: url('../images/done.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* style for scroll bar of the todoBlock */
+div.todoBlock::-webkit-scrollbar{
+    width: 0.5em;
+    
+}
+div.todoBlock::-webkit-scrollbar:horizontal{
+    display: none;
+    
+}
+
+div.todoBlock::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    
+}
+
+div.todoBlock::-webkit-scrollbar-thumb{
+    height: 10px;
+    background-color: rgb(255, 166, 0);
+    outline: 1px solid slategrey;
+}
+
+div.checked{
+    width: 23px;
+    height: 450px;
+    background-color: #00ac09;
+    position: fixed;
+    top: 174px;
+    left: 1258px;
+    color: white;
+    border-radius: 0px 10px 10px 0px;
+}
+
+div.checked>p{
+    writing-mode: vertical-lr;
+    margin-top: 150px;
+    color: white;
+    width: 100%;
+}
+
+/* STYLE FOR THE modal BLOCK */
+.closeButton{
+    width: 20px; 
+    height: 20px;
+    background-color: yellow;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: black;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    cursor: pointer;
+}
+
+.doneBlock{
+    margin: 0px;
+    width: 1197px;
+    height: 450px;
+    background-color: yellow;
+}
